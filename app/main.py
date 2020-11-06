@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from .routers import users, items, auth
-
+from .greeter import greet
 
 app = FastAPI()
 
@@ -12,6 +12,8 @@ app.include_router(
     prefix="/items",
     tags=["items"],
 )
+
+print(greet('sam'))
 
 
 
